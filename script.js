@@ -24,8 +24,11 @@ function playRound(playerSelection, computerSelection) {
         computerScore++;
         roundResult = "You Lose, Paper beats Rock";
     } else if (convertedPlayerSelection === "paper" && computerSelection === "rock") {
+        playerScore++;
+        roundResult = "You Win! Paper beats Rock";
+    } else if (convertedPlayerSelection === "paper" && computerSelection === "scissors") {
         computerScore++;
-        roundResult = "You Lose! Scissors beats Paper";
+        roundResult == "You Lose, Scissors beats Paper";
     } else if (convertedPlayerSelection === "scissors" && computerSelection === "paper") {
         playerScore++;
         roundResult = "You Win! Scissors beats Paper";
