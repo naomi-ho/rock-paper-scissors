@@ -1,0 +1,36 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    background-color: #2b2929;
+    color: white;
+}
+
+body {
+    text-align: center;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 25px;
+}
+
+.results {
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+}
+
+.btn {
+    font-size: 100px;
+    margin: 20px;
+    padding: 20px;
+    background-color:#626464;
+    border: none;
+    border-radius: 10px;
+}
