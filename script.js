@@ -64,7 +64,7 @@ function endGame (playerScore, computerScore) {
         gameResult.setAttribute("style", "font-size: 25px; font-weight: bold");
 
         playButton.textContent = "Play Again";
-        playButton.setAttribute("style", "background: #626464; border: none; font-size: 30px; padding: 20px; border-radius: 10px");
+        playButton.setAttribute("style", "background: #04AA6D; border: none; font-size: 30px; padding: 20px; border-radius: 10px");
 
         document.body.appendChild(gameResult);
         document.body.appendChild(playButton);
