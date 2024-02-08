@@ -26,6 +26,13 @@ h3 {
     justify-content: center;
 }
 
+.current-hand {
+    font-size: 100px;
+    margin: 20px;
+    padding: 20px;
+    font-weight: 300;
+}
+
 .btn {
     font-size: 100px;
     margin: 20px;
