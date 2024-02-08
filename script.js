@@ -25,6 +25,7 @@ function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
         playerScore++;
         computerScore++;
+        lineTwo.textContent = "It's a tie";
     } else if (playerSelection === "rock" && computerSelection === "scissors") {
         playerScore++;
         lineTwo.textContent = "You win! Rock beats Scissors";
