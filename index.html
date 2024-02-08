@@ -12,15 +12,20 @@
     </head>
     <body>
         <h1>Rock Paper Scissors</h1>
-        <div class="lines">
-            <h2 id="line-1">Select your hand</h2>
-            <h3 id="line-2">First to score 5 points wins the game</h3>
-        </div>
+        <h2 id="line-2">First to score 5 points wins the game</h2>
 
         <div class="results">
-            <h3 id="player-score">Player: 0</h3>
-            <h3 id="computer-score">Computer: 0</h3>
+            <div class="player-container">
+                <p class="current-hand" id="player-hand">?</p>
+                <h3 id="player-score">Player: 0</h3>
+            </div>
+            <div class="computer-container">
+                <p class="current-hand" id="computer-hand">?</p>
+                <h3 id="computer-score">Computer: 0</h3>
+            </div>
         </div>
+
+        <h3 id="line-1">Select your hand</h3>
 
         <div class="play-buttons">
             <button class="btn" id="rock">🪨</button>
