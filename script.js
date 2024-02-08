@@ -54,13 +54,18 @@ function playRound(playerSelection, computerSelection) {
 function endGame (playerScore, computerScore) {
     // declare the winner
     if (playerScore >= maxScore || computerScore >= maxScore) {
+        
         if (playerScore > computerScore) {
             gameResult.textContent = "You Win";
         } else {
             gameResult.textContent = "You Lose";
         }
 
+        gameResult.setAttribute("style", "font-size: 25px; font-weight: bold");
+
         playButton.textContent = "Play Again";
+        playButton.setAttribute("style", "background: #626464; border: none; font-size: 30px; padding: 20px; border-radius: 10px");
+
         document.body.appendChild(gameResult);
         document.body.appendChild(playButton);
 
@@ -68,6 +73,11 @@ function endGame (playerScore, computerScore) {
         document.getElementById("rock").disabled = true;
         document.getElementById("paper").disabled = true;
         document.getElementById("scissors").disabled = true;
+
+        // darkens buttons
+        document.getElementById("rock").style.backgroundColor = "#2b2929";
+        document.getElementById("paper").style.backgroundColor = "#2b2929";
+        document.getElementById("scissors").style.backgroundColor = "#2b2929";
     }
     // displays a replay button that will reload the window
     playButton.addEventListener("click", () => {
