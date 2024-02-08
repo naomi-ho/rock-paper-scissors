@@ -66,15 +66,15 @@ function endGame (playerScore, computerScore) {
     if (playerScore >= maxScore || computerScore >= maxScore) {
         
         if (playerScore > computerScore) {
-            gameResult.textContent = "You Win";
+            gameResult.textContent = "YOU WIN";
         } else {
-            gameResult.textContent = "You Lose";
+            gameResult.textContent = "YOU LOSE";
         }
 
         gameResult.setAttribute("style", "font-size: 25px; font-weight: bold");
 
         playButton.textContent = "Play Again";
-        playButton.setAttribute("style", "background: #04AA6D; border: none; font-size: 30px; padding: 20px; border-radius: 10px");
+        playButton.setAttribute("style", "background: #04AA6D; border: none; font-size: 20px; padding: 10px; border-radius: 10px");
 
         document.body.appendChild(gameResult);
         document.body.appendChild(playButton);
