@@ -23,8 +23,6 @@ function playRound(playerSelection, computerSelection) {
     const computerHand = document.getElementById("computer-hand");
 
     if (playerSelection === computerSelection) {
-        playerScore++;
-        computerScore++;
         lineTwo.textContent = "It's a tie";
     } else if (playerSelection === "rock" && computerSelection === "scissors") {
         playerScore++;
