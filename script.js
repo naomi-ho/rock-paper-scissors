@@ -7,6 +7,7 @@ const maxScore = 5;
 const gameResult = document.createElement("p");
 const playButton = document.createElement("button");
 
+
 // randomly returns either 'rock', 'paper' or 'scissors' for the computer's hand
 function getComputerChoice() {
     let computerChoicePosition = Math.floor(Math.random() * decisions.length);
@@ -19,11 +20,11 @@ function playRound(playerSelection, computerSelection) {
     const lineTwo = document.getElementById("line-2");
     const playerLine = document.getElementById("player-score");
     const computerLine = document.getElementById("computer-score");
+    const computerHand = document.getElementById("computer-hand");
 
     if (playerSelection === computerSelection) {
         playerScore++;
         computerScore++;
-        lineTwo.textContent = "It's a tie";
     } else if (playerSelection === "rock" && computerSelection === "scissors") {
         playerScore++;
         lineTwo.textContent = "You win! Rock beats Scissors";
@@ -42,6 +43,15 @@ function playRound(playerSelection, computerSelection) {
     } else if (playerSelection === "scissors" && computerSelection === "rock") {
         computerScore++;
         lineTwo.textContent = "You lose! Rock beats Scissors";
+    }
+
+    // displays the current computer hand being played for the round
+    if (computerSelection === "rock") {
+        computerHand.textContent = "🪨";
+    } else if (computerSelection === "paper") {
+        computerHand.textContent = "📜";
+    } else {
+        computerHand.textContent = "✂️"
     }
 
     // updates the player and computer scores
@@ -86,24 +96,29 @@ function endGame (playerScore, computerScore) {
 }
 
 function game() {
-    // runs game with player playing rock
     const playerSelectRock = document.querySelector("#rock");
+    const playerHand = document.getElementById("player-hand");
+
+    // runs game with player playing rock and updates the player's hand
     playerSelectRock.addEventListener('click', () => {
         playRound("rock", getComputerChoice());
+        playerHand.textContent = "🪨";
         endGame(playerScore, computerScore);
     });
 
-    // runs game with player playing scissors
+    // runs game with player playing scissors and updates the player's hand
     const playerSelectScissors = document.querySelector("#scissors");
     playerSelectScissors.addEventListener("click", () => {
         playRound("scissors", getComputerChoice());
+        playerHand.textContent = "✂️";
         endGame(playerScore, computerScore);
     });
 
-    // runs game with player playing paper
+    // runs game with player playing paper and updates the player's hand
     const playerSelectPaper = document.querySelector("#paper");
     playerSelectPaper.addEventListener("click", () => {
         playRound("paper", getComputerChoice());
+        playerHand.textContent = "📜";
         endGame(playerScore, computerScore);
     });
 }
